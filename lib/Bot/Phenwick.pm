@@ -3,11 +3,14 @@ use 5.12.0;
 use Moses;
 use namespace::autoclean;
 
+# ABSTRACT: Phenny in Perl
+
 server 'irc.perl.org';
 nickname 'phenwick';
 channels '#phenwick';
 
 plugins
+  Tell    => 'Bot::Phenwick::Plugin::Tell',
   Time    => 'Bot::Phenwick::Plugin::Time',
   Unicode => 'Bot::Phenwick::Plugin::Unicode',
   Weather => 'Bot::Phenwick::Plugin::Weather',
