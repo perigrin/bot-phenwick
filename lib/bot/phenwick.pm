@@ -10,6 +10,7 @@ channels '#phenwick';
 plugins
   Time    => 'Bot::Phenwick::Plugin::Time',
   Unicode => 'Bot::Phenwick::Plugin::Unicode',
+  Weather => 'Bot::Phenwick::Plugin::Weather',
   ;
 
 event irc_bot_addressed => sub {
