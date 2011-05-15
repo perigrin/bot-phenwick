@@ -1,7 +1,7 @@
 # Phenwick
 
 For several years now at someone's request (Robin Berjon I think), I have been
-running an instance of [phenny][http://inamidst.com/phenny/] on irc.perl.org.
+running an instance of [phenny](http://inamidst.com/phenny/) on irc.perl.org.
 She's a very useful bot, with many useful things she can do.
 
 She's also python.
