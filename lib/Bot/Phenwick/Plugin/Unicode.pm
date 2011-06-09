@@ -1,5 +1,7 @@
 package Bot::Phenwick::Plugin::Unicode;
 use 5.14.0;
+use utf8::all;
+
 use Moses::Plugin;
 use Unicode::UCD qw(charinfo);
 use Encode 'decode_utf8';

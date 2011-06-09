@@ -7,13 +7,15 @@ use namespace::autoclean;
 
 server 'irc.perl.org';
 nickname 'phenwick';
-channels '#phenwick';
+channels '#phenwick'; #'#axkit-dahut';
 
 plugins
-  Tell    => 'Bot::Phenwick::Plugin::Tell',
-  Time    => 'Bot::Phenwick::Plugin::Time',
-  Unicode => 'Bot::Phenwick::Plugin::Unicode',
-  Weather => 'Bot::Phenwick::Plugin::Weather',
+  DuckDuckGo => 'Bot::Phenwick::Plugin::DuckDuckGo',
+  Tell       => 'Bot::Phenwick::Plugin::Tell',
+  Time       => 'Bot::Phenwick::Plugin::Time',
+  Unicode    => 'Bot::Phenwick::Plugin::Unicode',
+  Weather    => 'Bot::Phenwick::Plugin::Weather',
+  Wikipedia  => 'Bot::Phenwick::Plugin::Wikipedia',
   ;
 
 event irc_bot_addressed => sub {

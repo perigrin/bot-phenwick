@@ -64,6 +64,7 @@ use 5.12.0;
         given ($$message) {
             when (qr/^tell\s+$RE{IRC}{nick}{-keep}\s+(.*)$/) {
                 my ($nick) = split /!/, $$nickstring;
+                my $for = lc($1);
                 my $msg = Bot::Phenwick::Plugin::Tell::Message->new(
                     from    => $nick,
                     for     => $1,
@@ -83,7 +84,7 @@ use 5.12.0;
     sub S_public {
         my ( $self, $irc, $nickstring, $channels, $message ) = @_;
         my ($nick) = split /!/, $$nickstring;
-        my $iter = $self->search( { for => $nick } );
+        my $iter = $self->search( { for => lc $nick } );
         while ( my $block = $iter->next ) {
             for my $msg (@$block) {
                 $self->privmsg( $_ => $msg->string ) for @$$channels;
